@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Eloquent
+Route::get('/mahasiswa', 'MahasiswaController@index');
+Route::get('/mahasiswa/tambah', 'MahasiswaController@tambah');
+Route::post('/mhsstore', 'MahasiswaController@store');
+Route::get('/mahasiswa/edit/{id}', 'MahasiswaController@edit');
+Route::post('/mhsupdate', 'MahasiswaController@update');
+Route::get('/mahasiswa/delete/{id}', 'MahasiswaController@delete');
